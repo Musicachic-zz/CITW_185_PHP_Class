@@ -29,8 +29,8 @@
                 <p>
                     This page provides access to my examples.
                 </p>
-
-                <ul>				
+                <div id="navcontainer">
+                <ul id="indexlist">
                     <li>
                         <a href="examples/hello-world.php">Hello World</a>		
                     </li>
@@ -44,9 +44,10 @@
                         <a href="examples/decision.php">Decision Example</a>		
                     </li>
                     <li>
-                        <a href="examples/loops.php">Decision Example</a>		
+                        <a href="examples/loops.php">Loop Example</a>		
                     </li>
-                </ul>		
+                </ul>
+                </div>
 
             </div>	<!-- end of content -->
 
