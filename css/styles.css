@@ -453,7 +453,16 @@ ul.navlist
 .navlist li
 	{
 	display: inline;
-	list-style-type: none
+	list-style-type: none;
+        padding: 0.25em;
+	}
+        
+#indexlist li
+	{
+
+	list-style-type: none;
+        border-bottom: 1px solid gray;
+        padding: 0.25em;
 	}
 
 .navlist a
