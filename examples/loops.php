@@ -9,13 +9,13 @@
     include('../includes/header.php');
     // code
     error_reporting(E_ALL);    // set error reporting to all
-    echo("<h1>Teresa's code output for Loops:</h1>");
+    echo("<h1 id=Mainheader>Teresa's code output for Loops:</h1>");
 
     echo('<h3>Loops</h3>');
 
     // Numeric 'for loop' =====================
 
-    echo('<p><b>Numeric "for loop":</b><br> ');
+    echo('<p class=padding><b>Numeric "for loop":</b><br> ');
 
     for ($i = 1; $i < 10; $i++)
         {
@@ -26,7 +26,7 @@
 
     // String 'for loop' =====================
 
-    echo('<p><b>String "for loop": </b><br>');
+    echo('<p class=padding><b>String "for loop": </b><br>');
 
     for ($i = 'aa'; $i < 'ag'; $i++)
         {
@@ -36,7 +36,7 @@
     echo('</p>');
 
     // while loop =====================
-    echo('<p><b>while "loop" : </b><br>');
+    echo('<p class=padding><b>while "loop" : </b><br>');
 
     $i = 1;
     while ($i < 10)
@@ -50,7 +50,7 @@
     echo('</p>');
 
     // foreach loop =====================
-    echo('<p><b>For Each "loop": </b><br><br> ');
+    echo('<p class=padding><b>For Each "loop": </b><br><br> ');
 
     // populate a simple array
 
@@ -68,7 +68,7 @@
 
     // foreach loop using key =====================
 
-    echo('<p><b>For Each "loop" using a key:</b><br><br>  ');
+    echo('<p class=padding><b>For Each "loop" using a key:</b><br><br>  ');
 
     // populate an array with keys and values
 

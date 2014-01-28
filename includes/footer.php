@@ -5,13 +5,13 @@
 	<link rel="stylesheet" href="../css/styles.css" media="screen">	
 </head>		 			 
 
-		<?php	// show code
+		<?php 	// show code
 		
 			$self = basename($_SERVER[SCRIPT_NAME]);
 			
-			echo('<hr>CODE FOLLOWS<br><br>');					
+			echo('<hr class=padding>CODE FOLLOWS<br><br>');					
 			highlight_file ($self);
-			echo('<hr>');	
+			echo('<hr class=padding>');	
 		?>
                 <div class="navcontainer">
                     <ul class="navlist">

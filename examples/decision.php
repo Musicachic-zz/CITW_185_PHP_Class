@@ -4,7 +4,7 @@
     // code 
     error_reporting(E_ALL);    // set error reporting to all 
                          
-    echo("<h1>Teresa's Decision Code</h1>"); 
+    echo("<h1 id=Mainheader>Teresa's Decision Code</h1>"); 
                          
     echo('<h3> If / Else If / Switch Examples</h3>'); 
 
