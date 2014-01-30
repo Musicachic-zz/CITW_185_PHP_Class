@@ -26,30 +26,30 @@
 
                 <h1 id="Mainheader">Teresa's Main Page </h1>
 
-                <p>
-                    This page provides access to my examples.
-                </p>
                 <div id="navcontainer2">
-                <ul id="indexlist">
-                    <li><a href="index.php">Hello World Examples</a>
-                    <ul id="subnavlist">
-                    <li>
-                        <a href="examples/hello-world.php">Hello World</a>		
-                    </li>
-                    <li>
-                        <a href="examples/hello-world-show-code.php">Hello World w show code</a>		
-                    </li>	
-                    <li>
-                        <a href="examples/hello-world-include.php">Hello World w include</a>		
-                    </li>
+                    <ul id="indexlist">
+                        <li><a href="index.php">Hello World Examples</a>
+                            <ul id="subnavlist">
+                                <li>
+                                    <a href="examples/hello-world.php">Hello World</a>		
+                                </li>
+                                <li>
+                                    <a href="examples/hello-world-show-code.php">Hello World w show code</a>		
+                                </li>	
+                                <li>
+                                    <a href="examples/hello-world-include.php">Hello World w include</a>		
+                                </li>
+                            </ul>
+                        <li>
+                            <a href="examples/circal.php">Circle Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/decision.php">Decision Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/loops.php">Loop Example</a>		
+                        </li>
                     </ul>
-                    <li>
-                        <a href="examples/decision.php">Decision Example</a>		
-                    </li>
-                    <li>
-                        <a href="examples/loops.php">Loop Example</a>		
-                    </li>
-                </ul>
                 </div>
 
             </div>	<!-- end of content -->

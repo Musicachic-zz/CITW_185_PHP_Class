@@ -76,7 +76,7 @@
                     'Two' => "Rocky IV",
                     'Three' => "Enter the Dragon",
                     'Four' => "Coming to America",
-                    'Five' => "The Dark Knight",
+                    'Five' => "The Last Dragon",
                     );
     echo('My top 5 favorite movies of all time are: <br>');
 
