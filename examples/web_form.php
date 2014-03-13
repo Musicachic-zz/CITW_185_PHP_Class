@@ -4,8 +4,14 @@ include('../includes/header.php');
 
 echo ("<h1>What Decade Are You A Child Of?</h1>");
 
+    $self = htmlspecialchars(basename($_SERVER['SCRIPT_NAME'])); 
 
-
+/* @var $first_name type */
+    $first_name = isset($_POST['first_name']) ? $_POST['first_name'] : null;
+    $last_name = isset($_POST['last_name']) ? $_POST['last_name'] : null;
+    $dob = isset($_POST['dob']) ? $_POST['dob'] : null;
+    $female = isset($_POST['female']) ? $_POST['female'] : null;
+    $male = isset($_POST['male']) ? $_POST['male'] : null;
 ?>
 <form action="myForm" <?php echo($self); ?>method="post">
     <table>
@@ -29,14 +35,14 @@ echo ("<h1>What Decade Are You A Child Of?</h1>");
                 Date of Birth:
             </td>
             <td class="right">
-                <input type="date" name="bday" size="30">
+                <input type="date" name="bday" size="30" value="<?php echo($dob); ?>" <?php echo($read_only); ?>>
             </td>
             <td class="left" class="label">
                 Gender:                
             </td>
             <td class="right">
-                Female <input type="checkbox" name="Female">
-                Male <input type="checkbox" name="Male">
+                Female <input type="checkbox" name="Female" value="<?php echo($female); ?>" <?php echo($read_only); ?>>
+                Male <input type="checkbox" name="Male" value="<?php echo($male); ?>" <?php echo($read_only); ?>>
             </td>
 
         </tr>
@@ -75,9 +81,11 @@ echo ("<h1>What Decade Are You A Child Of?</h1>");
             </td>
         </tr>
         <tr>
+            <td>
             <input type="submit" name="submit" value="Edit" <?php echo($save_on);?>> 
             <input type="submit" name="submit" value="Save" <?php echo($edit_on);?> > 
-            <input type="submit" name="submit" value="Cancel" <?php echo($edit_on);?> > 
+            <input type="submit" name="submit" value="Cancel" <?php echo($edit_on);?> >
+            </td>
         </tr>
     </table>      
 </form>
