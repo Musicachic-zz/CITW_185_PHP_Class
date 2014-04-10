@@ -6,7 +6,7 @@
         <title>Teresa's Introduction to PHP</title>
         <link rel="stylesheet" href="css/styles.css" media="screen">	
     </head>
-
+    <?php session_start(); ?>
     <body>
 
         <div id="page">	<!-- start of page -->			
@@ -49,6 +49,24 @@
                         <li>
                             <a href="examples/loops.php">Loop Example</a>		
                         </li>
+                        <li>
+                            <a href="examples/strings.php">String Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/arrays.php">Array Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/functions.php">Functions Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/web_form.php">Form Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/pulldata.php">SQL Example</a>		
+                        </li>
+                        <li>
+                            <a href="examples/mysql.php">Another SQL Example</a>		
+                        </li>
                     </ul>
                 </div>
 
@@ -57,7 +75,8 @@
 
             <div id="footer" style="background-color:#f4096b; padding: 15px;">
                 <p style="color:white">
-                    Copyright&copy; <?php echo (date("Y")); ?>  Teresa Potts
+                    Copyright&copy; <?php echo (date("Y")); ?>  Teresa Potts <br>
+                    <?php echo('Session ID = ' . session_id() . ''); ?>
                 </p>
             </div>
 

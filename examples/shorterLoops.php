@@ -6,6 +6,7 @@
 </head>
 
 <?php
+    session_start();
     // code
     error_reporting(E_ALL);    // set error reporting to all
     echo("<h1 id=Mainheader>Teresa's code output for Loops:</h1>");

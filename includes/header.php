@@ -15,10 +15,10 @@
 			</h1>
 		</div>
 					
-			<div id="picture">
+<!--			<div id="picture">
 				<img src="../images/Teresa200x200.jpg" alt="Teresa Picture"><br>
 				
-			</div>
+			</div>-->
             <br>
 		<div class="navcontainer-top">
 			<ul class="navlist">

@@ -1,5 +1,4 @@
 <?php 
-
     //Code for content
     include('../includes/header.php');     
      

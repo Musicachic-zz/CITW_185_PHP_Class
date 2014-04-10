@@ -19,7 +19,8 @@
                     </ul>
 		</div>
 		<p style="background-color:#f4096b; padding: 15px; color:white; margin-bottom: 0px; text-align: center">
-                Copyright&copy; <?php echo (date("Y")); ?>  Teresa Potts
+                    Copyright&copy; <?php echo (date("Y")); ?>  Teresa Potts <br>
+                <?php  echo('Session ID = ' . session_id() . '');  ?>
 		</p>
 
 </html>

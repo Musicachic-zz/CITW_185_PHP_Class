@@ -6,6 +6,7 @@
 </head>
 
 <?php
+    session_start();
     include('../includes/header.php');
     // code
     error_reporting(E_ALL);    // set error reporting to all

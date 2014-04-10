@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('../includes/header.php');
 
 echo('<pre>');
@@ -14,16 +15,27 @@ $submit = isset($_POST['submit']) ? $_POST['submit'] : null;
 $first_name = isset($_POST['first_name']) ? $_POST['first_name'] : null;
 $last_name = isset($_POST['last_name']) ? $_POST['last_name'] : null;
 $dob = isset($_POST['dob']) ? $_POST['dob'] : null;
+$female = isset($_POST['Female']) ? $_POST['Female'] : null;
+$male = isset($_POST['Male']) ? $_POST['Male'] : null;
+$miamivice = isset($_POST['miamivice']) ? $_POST['miamivice'] : null;
+$factsoflife = isset($_POST['factsoflife']) ? $_POST['factsoflife'] : null;
+$growingpains = isset($_POST['growingpains']) ? $_POST['growingpains'] : null;
+$freshprince = isset($_POST['freshprince']) ? $_POST['freshprince'] : null;
+$roseanne = isset($_POST['roseanne']) ? $_POST['roseanne'] : null;
+$familymatters = isset($_POST['familymatters']) ? $_POST['familymatters'] : null;
+$theoffice = isset($_POST['theoffice']) ? $_POST['theoffice'] : null;
+$willandgrace = isset($_POST['willandgrace']) ? $_POST['willandgrace'] : null;
+$americanidol = isset($_POST['americanidol']) ? $_POST['americanidol'] : null;
 
-    $option = array();
+$option = array();
 
-if(isset($_POST['option']))
-    {
+if (isset($_POST['option']))
+{
     foreach ($_POST['option'] as $value)
-        {
+    {
         $option[] = $value;
-        }
     }
+}
 
 $a = ($female == 'on') ? 'CHECKED' : '';
 $b = ($male == 'on') ? 'CHECKED' : '';
@@ -39,39 +51,67 @@ $j = ($willandgrace == 'on') ? 'CHECKED' : '';
 $k = ($americanidol == 'on') ? 'CHECKED' : '';
 $checked = 'CHECKED';
 
-if ($_POST[$c]== $checked && $_POST[$d]== $checked && $_POST[$e]== $checked)
+$eighties = $c && $d && $e == $checked;
+$nineties = $f && $g && $h == $checked;
+$milenium = $i && $j && $k == $checked;
+$all = $c && $d && $e && $f && $g && $h && $i && $j && $k == $checked;
+$any = $c || $d || $e || $f || $g || $h || $i || $j || $k == $checked;
+
+if ($all)
 {
-    echo ("You are a child of the 80's");
+    echo ("You apparently have had many lives.");
+} 
+else if ($eighties & $nineties)
+{
+    echo ("You are a child of the 80s and the 90s");
+} 
+else if ($nineties & $milenium)
+{
+    echo("You are a child of the 90s and the new milenium.");
+} 
+else if ($any)
+{
+    echo("Oh good you were a kid once...");
+
+//    if ($eighties & $nineties){
+//        echo ("You are a child of the 80s and the 90s");
+//    }
+//    
+//    if ($nineties & $milenium){
+//        echo("You are a child of the 90s and the new milenium.");
+//    }
+
+    if ($eighties) //&& ($f && $g && $h && $i && $j && $k != $checked) 
+    {
+        //$checked = 'CHECKED';
+        echo ("You are a child of the 80's");
+    }
+    if ($nineties) //&& ($i && $j && $k && $c && $d && $e != $checked)
+    {
+        echo ("You are a child of the 90's");
+    }
+    if ($milenium) //&& ($c && $d && $e && $f && $g && $h != $checked)
+    {
+        echo ("You are a child of the new milenium.");
+    }
 }
 
-if (isset($c['CHECKED']) && isset($d['CHECKED']) && isset($e['CHECKED']))
+
+
+$step = ($submit == 'Edit') ? 1 : 0;
+if ($step)
 {
-    echo("You are a child of the 80s");
+    $edit_on = '';
+    $save_on = 'DISABLED';
+    $read_only = '';
+} else
+{
+    $edit_on = 'DISABLED';
+    $save_on = '';
+    $read_only = 'DISABLED';
 }
 
-if ([$c]== $checked && [$d]== $checked && [$e]== $checked)
-{
-    echo ("You are a child of the 80's");
-}
 
-if ($_POST[$c]== 'CHECKED' && $_POST[$d]== 'CHECKED' && $_POST[$e]== 'CHECKED')
-{
-    echo ("You are a child of the 80's");
-}
-
-//$step = ($submit == 'Edit') ? 1 : 0;
-//if ($step)
-//{
-//    $edit_on = '';
-//    $save_on = 'DISABLED';
-//    $read_only = '';
-//}
-//else
-//{
-//    $edit_on = 'DISABLED';
-//    $save_on = '';
-//    $read_only = 'DISABLED';
-//}
 ?>
 <form action="<?php echo($self); ?>" method="post">
     <table>
@@ -95,7 +135,7 @@ if ($_POST[$c]== 'CHECKED' && $_POST[$d]== 'CHECKED' && $_POST[$e]== 'CHECKED')
                 Date of Birth:
             </td>
             <td class="right">
-                <input type="date" name="bday" size="30" value="<?php echo($dob); ?>" <?php echo($read_only); ?>>
+                <input type="date" name="dob" size="30" value="<?php echo($dob); ?>" <?php echo($read_only); ?>>
             </td>
             <td class="left" class="label">
                 Gender:
@@ -147,5 +187,6 @@ if ($_POST[$c]== 'CHECKED' && $_POST[$d]== 'CHECKED' && $_POST[$e]== 'CHECKED')
     </table>
 </form>
 <?php
+
 include('../includes/footer.php');
 ?>
